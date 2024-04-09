@@ -8,9 +8,12 @@ The essence of PyScrub is to offer a scalable, user-friendly platform for data s
 To get started with PyScrub, follow these simple steps:
 
 ## Prerequisites
+
+```sh
 Docker installed on your system
 Basic understanding of Docker commands
 Familiarity with JSON format for configuration
+```
 
 ## Installation and Setup
 
