@@ -1,16 +1,5 @@
 # PyScrub
-Built on the powerful PySpark framework and packaged within a Docker environment, PyWash offers a scalable, flexible, and efficient way to cleanse and profile large datasets. Whether you're dealing with inconsistencies, missing values, or you need to understand your data's structure and quality at a glance, PyWash is here to help.
+Welcome to PyScrub! Leveraging the robustness of PySpark and the versatility of Docker, PyScrub stands as a premier solution for cleaning and profiling large datasets. Designed to tackle a wide array of data issues—from inconsistencies and missing values to comprehensive data quality assessment—PyScrub ensures your data is not just clean, but also understood.
 
-Run docker build : docker build -t pywash -f docker/Dockerfile .
-
-Run docker run -it --rm --name pyscrub-instance -v $(pwd)/data:/app/data pyscrub
-
-## Configuration
-
-To configure PyWash for your datasets, duplicate the `config_template.json` file and rename the copy to `config.json`. Adjust the settings in `config.json` to match your dataset and cleaning/profiling requirements.
-
-Example:
-
-```bash
-cp config_template.json config.json
-# Edit config.json as needed
+## Purpose
+The essence of PyScrub is to offer a scalable, user-friendly platform for data scientists and analysts to enhance their data quality with minimal effort. It's built with the vision of handling vast datasets, providing detailed insights into your data, and preparing it for further analysis or machine learning processes. Whether you are looking to preprocess data for analytics or ensure data quality in your data pipelines, PyScrub provides the tools you need.
