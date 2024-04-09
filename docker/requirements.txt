@@ -1,3 +1,4 @@
+pandas
 pyspark==3.2.1
 pytest==6.2.5
 # Add other dependencies here

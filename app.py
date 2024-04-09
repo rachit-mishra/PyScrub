@@ -6,9 +6,23 @@ from src.pyscrub.cleaning import remove_outliers, normalize_column
 from src.pyscrub.profiling import generate_statistics, data_quality_report
 import os
 
-# Create the output directory if it doesn't exist
-output_dir = "/app/data/output"
-os.makedirs(output_dir, exist_ok=True)
+import os
+import pandas as pd  # Make sure pandas is installed
+
+def write_dataframe_to_csv(df, path):
+    """
+    Collects a Spark DataFrame to the driver node and writes it as a single CSV file.
+    Note: Use for small datasets to avoid memory issues. Scalability work to be taken up as future enhancements.
+    """
+    # Convert Spark DataFrame to a pandas DataFrame
+    pandas_df = df.toPandas()
+
+    # Create the directory for the file if it doesn't exist, not the file itself
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    # Write the pandas DataFrame to CSV
+    pandas_df.to_csv(path, index=False)
+
 
 def main(config_path):
     with open(config_path, 'r') as config_file:
@@ -26,7 +40,7 @@ def main(config_path):
     
     # Writing the cleaned data to the output directory
     cleaned_data_path = "/app/data/output/cleaned_data.csv"
-    df.coalesce(1).write.option("header", "true").csv(cleaned_data_path, mode="overwrite")    
+    write_dataframe_to_csv(df, cleaned_data_path)
     
     # Similarly, call profiling functions as needed
     if "profiling_tasks" in config:
@@ -36,11 +50,11 @@ def main(config_path):
                 stats_df.show()
                 # Writing profiling results to the output directory
                 profiled_report_path = "/app/data/output/profiled_report.csv"
-                stats_df.coalesce(1).write.option("header", "true").csv(profiled_report_path, mode="overwrite")
+                write_dataframe_to_csv(stats_df, profiled_report_path)
             elif task["task"] == "data_quality_report":
-                df = data_quality_report(df, **task["params"])
+                quality_df = data_quality_report(df, **task["params"])
                 data_quality_report_path = "/app/data/output/data_quality_report.csv"
-                df.coalesce(1).write.option("header", "true").csv(profiled_report_path, mode="overwrite")
+                write_dataframe_to_csv(quality_df, data_quality_report_path)
 
     spark.stop()
 
