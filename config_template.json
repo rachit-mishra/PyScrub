@@ -1,0 +1,26 @@
+{
+    "data_path": "/app/data/dummy_data.csv",
+    "cleaning_tasks": [
+      {
+        "task": "remove_missing_values",
+        "params": {
+          "columns": ["name", "age"]
+        }
+      },
+      {
+        "task": "normalize_column",
+        "params": {
+          "column": "salary"
+        }
+      }
+    ],
+    "profiling_tasks": [
+      {
+        "task": "generate_statistics",
+        "params": {
+          "columns": ["age", "salary"]
+        }
+      }
+    ]
+  }
+  
