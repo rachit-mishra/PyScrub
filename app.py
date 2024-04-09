@@ -2,8 +2,8 @@
 
 import json
 from pyspark.sql import SparkSession
-from src.pywash.cleaning import remove_outliers, normalize_column
-from src.pywash.profiling import generate_statistics, data_quality_report
+from src.pyscrub.cleaning import remove_outliers, normalize_column
+from src.pyscrub.profiling import generate_statistics, data_quality_report
 import os
 
 # Create the output directory if it doesn't exist
