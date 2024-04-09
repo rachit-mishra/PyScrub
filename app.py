@@ -1,28 +1,35 @@
-# PyWash/app.py
+# app.py
 
+import json
 from pyspark.sql import SparkSession
-from src.pywash.cleaning import remove_missing_values
-# Import additional cleaning and profiling functions as needed
+from src.pywash.cleaning import remove_outliers, normalize_column
+from src.pywash.profiling import generate_statistics, data_quality_report
 
-def main():
-    # Initialize Spark Session
-    spark = SparkSession.builder \
-        .appName("PyWash") \
-        .getOrCreate()
+def main(config_path):
+    with open(config_path, 'r') as config_file:
+        config = json.load(config_file)
 
-    # Example: Load a dataset (this will depend on your actual data source)
-    df = spark.read.csv("/app/data/sample_data.csv", header=True, inferSchema=True)
+    spark = SparkSession.builder.appName("PyWash").getOrCreate()
+    df = spark.read.csv(config["data_path"], header=True, inferSchema=True)
 
-    # Example: Apply a cleaning function
-    cleaned_df = remove_missing_values(df, columns=['column1', 'column2'])
-    
-    # Example: Show the result
-    cleaned_df.show()
+    # Assume config includes tasks as dictionaries with necessary parameters
+    for task in config["cleaning_tasks"]:
+        if task["task"] == "remove_outliers":
+            df = remove_outliers(df, **task["params"])
+        elif task["task"] == "normalize_column":
+            df = normalize_column(df, **task["params"])
 
-    # TODO: Implement additional cleaning and profiling steps
+    # Similarly, call profiling functions as needed
+    if "profiling_tasks" in config:
+        for task in config["profiling_tasks"]:
+            if task["task"] == "generate_statistics":
+                stats_df = generate_statistics(df, **task["params"])
+                stats_df.show()
+            elif task["task"] == "data_quality_report":
+                df = data_quality_report(df, **task["params"])
 
-    # Stop the Spark session
     spark.stop()
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(sys.argv[1])
