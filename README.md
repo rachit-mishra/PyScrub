@@ -14,9 +14,15 @@ Familiarity with JSON format for configuration
 
 ## Installation and Setup
 
-1. Clone the Repository
+1. Clone the Repository : Start by cloning the PyScrub repository to your local machine:
 
-Start by cloning the PyScrub repository to your local machine:
+```sh
+git clone https://github.com/<your-username>/PyScrub.git
+cd PyScrub
+```
 
-`git clone https://github.com/<your-username>/PyScrub.git`
-`cd PyScrub`
+## Contributing to PyScrub
+We welcome contributions! Whether it's adding new features, improving documentation, or reporting bugs, your help makes PyScrub better for everyone. Before contributing, please review our contributing guidelines in CONTRIBUTING.md.
+
+## Getting Help
+If you encounter any issues or have questions about PyScrub, feel free to open an issue on GitHub. For more detailed inquiries, you can contact us directly at [your-email@example.com].
