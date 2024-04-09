@@ -37,7 +37,7 @@ This command constructs a Docker image named pyscrub, based on the Dockerfile lo
 ```sh
 cp config_template.json config.json
 ```
-After copying, open config.json with your preferred text editor and adjust the settings to match your dataset and cleaning/profiling requirements.
+After copying, open config.json with your preferred text editor and adjust the settings to match your dataset and cleaning/profiling requirements. Place your dataset in location /data/.
 
 4. Running PyScrub : Once the Docker image is built and your config.json is configured, run PyScrub with the following command.
 
