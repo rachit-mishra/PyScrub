@@ -1,0 +1,6 @@
+id,name,age,salary
+1,John Doe,30,60000
+2,Jane Doe,,70000
+3,Steve Smith,45,
+4,Anne Davis,27,50000
+5,,35,40000
