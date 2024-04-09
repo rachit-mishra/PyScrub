@@ -1,0 +1,5 @@
+Column,MissingValues,UniqueValues
+name,0,20
+department,0,4
+age,2,19
+salary,3,18

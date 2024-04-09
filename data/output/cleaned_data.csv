@@ -1,0 +1,21 @@
+id,name,age,salary,department,status
+1,John Doe,34.0,-0.09553575609753195,Engineering,Active
+2,Jane Smith,,1.1866546546851395,Marketing,Active
+3,Bob Brown,45.0,,Product,Inactive
+4,Alice Johnson,28.0,-0.6084119204106005,Engineering,Active
+5,Chris Davis,38.0,-1.2922468061613588,Sales,Active
+6,Elizabeth Ray,30.0,0.16090232605900237,Marketing,Leave
+7,Derek Ward,,1.6995308189982083,Product,Active
+8,Fiona Green,41.0,,Engineering,Inactive
+9,Gary White,50.0,-1.8051229704744274,Sales,Active
+10,Helen King,26.0,0.673778490372071,Product,Active
+11,Ian Morris,39.0,0.9302165725286053,Engineering,Active
+12,Judy Foster,37.0,-1.1212880847236693,Marketing,Leave
+13,Kyle Adams,29.0,-1.3777261668802034,Sales,Inactive
+14,Laura Lee,33.0,-0.35197383825406625,Product,Active
+15,Mike Brown,46.0,0.4173404082155367,Engineering,Active
+16,Nina Scott,32.0,-0.18101511681637672,Marketing,Active
+17,Oscar Knight,44.0,,Sales,Active
+18,Patty Jenkins,35.0,0.07542296534015759,Engineering,Inactive
+19,Quincy Adams,48.0,0.5882991296532263,Product,Active
+20,Rachel Allan,27.0,1.1011752939662949,Marketing,Leave
