@@ -47,4 +47,4 @@ This command mounts your local data directory into /app/data inside the Docker c
 We welcome contributions! Whether it's adding new features, improving documentation, or reporting bugs, your help makes PyScrub better for everyone. Before contributing, please review our contributing guidelines in CONTRIBUTING.md.
 
 ## Getting Help
-If you encounter any issues or have questions about PyScrub, feel free to open an issue on GitHub. For more detailed inquiries, you can contact us directly at [your-email@example.com].
+If you encounter any issues or have questions about PyScrub, feel free to open an issue on GitHub. For more detailed inquiries, you can contact us directly at [rachit.mishra94@gmail.com].
