@@ -1,6 +1,21 @@
-id,name,age,salary
-1,John Doe,30,60000
-2,Jane Doe,,70000
-3,Steve Smith,45,
-4,Anne Davis,27,50000
-5,,35,40000
+id,name,age,salary,department,status
+1,John Doe,34,70000,Engineering,Active
+2,Jane Smith,,85000,Marketing,Active
+3,Bob Brown,45,,Product,Inactive
+4,Alice Johnson,28,64000,Engineering,Active
+5,Chris Davis,38,56000,Sales,Active
+6,Elizabeth Ray,30,73000,Marketing,Leave
+7,Derek Ward,,91000,Product,Active
+8,Fiona Green,41,,Engineering,Inactive
+9,Gary White,50,50000,Sales,Active
+10,Helen King,26,79000,Product,Active
+11,Ian Morris,39,82000,Engineering,Active
+12,Judy Foster,37,58000,Marketing,Leave
+13,Kyle Adams,29,55000,Sales,Inactive
+14,Laura Lee,33,67000,Product,Active
+15,Mike Brown,46,76000,Engineering,Active
+16,Nina Scott,32,69000,Marketing,Active
+17,Oscar Knight,44,,Sales,Active
+18,Patty Jenkins,35,72000,Engineering,Inactive
+19,Quincy Adams,48,78000,Product,Active
+20,Rachel Allan,27,84000,Marketing,Leave
