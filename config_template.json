@@ -15,12 +15,30 @@
       }
     ],
     "profiling_tasks": [
-      {
-        "task": "generate_statistics",
-        "params": {
-          "columns": ["age", "salary"]
+        {
+          "task": "generate_statistics",
+          "params": {
+            "columns": ["age", "salary"]
+          }
+        },
+        {
+          "task": "correlation_matrix",
+          "params": {
+            "numeric_columns": ["age", "salary"]
+          }
+        },
+        {
+          "task": "frequency_distribution",
+          "params": {
+            "categorical_columns": ["department"]
+          }
+        },
+        {
+          "task": "data_quality_report",
+          "params": {
+            "columns": ["name","department","age", "salary"]
+          }
         }
-      }
-    ]
-  }
-  
+      ]
+    }
+    
